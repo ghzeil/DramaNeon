@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="database.js" />
+    <File Path="details.html" />
+    <File Path="index.html" />
+    <File Path="movies.html" />
+    <File Path="series.html" />
+    <File Path="top-watched.html" />
+    <File Path="watch.html" />
+  </Folder>
+</Solution>

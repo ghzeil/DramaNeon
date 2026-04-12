@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>دراما نيون - الأقسام</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Monoton&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #050505;
+            --neon-purple: #bc13fe;
+            --dark-purple: #1a0033;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+        }
+
+        /* الهيدر الموحد */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(10, 0, 20, 0.95);
+            border-bottom: 2px solid var(--neon-purple);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
+        .logo {
+            font-family: 'Monoton', cursive;
+            font-size: 32px;
+            color: var(--neon-purple);
+            text-shadow: 0 0 15px var(--neon-purple);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+                nav ul li a:hover {
+                    color: var(--neon-purple);
+                    text-shadow: 0 0 10px var(--neon-purple);
+                }
+
+        /* البحث التفاعلي */
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 0;
+            opacity: 0;
+            transition: 0.5s;
+            background: #1a0033;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .search-container:hover .search-input {
+            width: 200px;
+            opacity: 1;
+            padding: 8px 15px;
+            border: 1px solid var(--neon-purple);
+        }
+
+        .search-icon {
+            color: var(--neon-purple);
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .container {
+            padding: 40px 50px;
+        }
+
+        .section-title {
+            border-right: 5px solid var(--neon-purple);
+            padding-right: 15px;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-shadow: 0 0 10px var(--neon-purple);
+        }
+
+        /* شبكة المحتوى */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #111;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(188, 19, 254, 0.2);
+            transition: 0.4s;
+            text-decoration: none;
+            color: white;
+            position: relative;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                border-color: var(--neon-purple);
+                box-shadow: 0 0 20px var(--neon-purple);
+            }
+
+            .card img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+        .card-info {
+            padding: 15px;
+            text-align: center;
+            background: linear-gradient(transparent, #1a0033);
+        }
+
+        .neon-btn {
+            background: none;
+            border: 2px solid var(--neon-purple);
+            color: var(--neon-purple);
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            box-shadow: 0 0 5px var(--neon-purple);
+        }
+
+            .neon-btn:hover {
+                background: var(--neon-purple);
+                color: white;
+                box-shadow: 0 0 20px var(--neon-purple);
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DRAMA NEON</a>
+        <nav>
+            <ul>
+                <li><a href="top-watched.html">الأكثر مشاهدة</a></li>
+                <li><a href="series.html">مسلسلات</a></li>
+                <li><a href="movies.html">أفلام</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="ابحث هنا...">
+            <span class="search-icon">🔍</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">تصفح المحتوى</h2> <div class="grid">
+            <a href="details.html" class="card">
+                <img src="https://via.placeholder.com/200x300/240046/fff?text=Drama+Neon" alt="">
+                <div class="card-info">
+                    <h4>اسم العمل</h4>
+                    <p>⭐ 9.5</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

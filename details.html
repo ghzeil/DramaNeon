@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تفاصيل العمل - DRAMA NEON</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Monoton&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #050505;
+            --neon-purple: #bc13fe;
+            --dark-purple: #1a0033;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: #0a0014;
+            border-bottom: 2px solid var(--neon-purple);
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
+        .logo {
+            font-family: 'Monoton', cursive;
+            font-size: 32px;
+            color: var(--neon-purple);
+            text-shadow: 0 0 10px var(--neon-purple);
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            padding: 60px 50px;
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .poster-side {
+            width: 350px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+            .poster-side img {
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 0 0 30px var(--neon-purple);
+                border: 1px solid var(--neon-purple);
+            }
+
+        .info-side {
+            flex: 1;
+        }
+
+            .info-side h1 {
+                font-size: 50px;
+                margin: 0 0 10px 0;
+                color: var(--neon-purple);
+                text-shadow: 0 0 10px var(--neon-purple);
+            }
+
+        .category-tag {
+            background: var(--dark-purple);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--neon-purple);
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .neon-btn {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 2px solid var(--neon-purple);
+            color: var(--neon-purple);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            background: none;
+        }
+
+            .neon-btn:hover {
+                background: var(--neon-purple);
+                color: white;
+                box-shadow: 0 0 25px var(--neon-purple);
+                transform: scale(1.05);
+            }
+
+        .trailer-link {
+            display: block;
+            margin-top: 15px;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+            .trailer-link:hover {
+                color: var(--neon-purple);
+            }
+    </style>
+</head>
+<body>
+    <header><a href="index.html" class="logo">DRAMA NEON</a></header>
+    <div class="container" id="details-content"></div>
+
+    <script src="database.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const itemId = params.get('id');
+        const item = myDramaData.find(x => x.id == itemId);
+
+        if (item) {
+            document.getElementById('details-content').innerHTML = `
+                    <div class="poster-side">
+                        <img src="${item.img}" onerror="this.src='https://via.placeholder.com/350x500?text=Image+Error'">
+                        <a href="${item.trailer}" target="_blank" class="trailer-link">▶ مشاهدة التريلر الرسمي</a>
+                    </div>
+                    <div class="info-side">
+                        <h1>${item.title}</h1>
+                        <div class="category-tag">${item.category}</div>
+                        <p style="font-size:18px; line-height:1.8; color:#ccc;">${item.description}</p>
+                        <a href="watch.html?id=${item.id}&ep=1" class="neon-btn">شاهد الآن</a>
+                        <div style="margin-top:40px;">
+                            <h3>المواسم</h3>
+                            <select style="background:#111; color:white; border:1px solid var(--neon-purple); padding:10px; width:200px;">
+                                <option>الموسم 1</option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+        }
+    </script>
+</body>
+</html>
