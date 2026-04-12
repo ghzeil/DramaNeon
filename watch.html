@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مشاهدة - DRAMA NEON</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Monoton&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #050505;
+            --neon-purple: #bc13fe;
+            --dark-purple: #1a0033;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(10, 0, 20, 0.95);
+            border-bottom: 2px solid var(--neon-purple);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
+        .logo {
+            font-family: 'Monoton', cursive;
+            font-size: 32px;
+            color: var(--neon-purple);
+            text-shadow: 0 0 15px var(--neon-purple);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+                nav ul li a:hover {
+                    color: var(--neon-purple);
+                    text-shadow: 0 0 10px var(--neon-purple);
+                }
+
+        .main-layout {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        @media (min-width: 992px) {
+            .main-layout {
+                flex-direction: row-reverse;
+            }
+
+            .server-sidebar {
+                width: 250px;
+                flex-shrink: 0;
+            }
+        }
+
+        .server-sidebar {
+            background: #0a0a0a;
+            border: 1px solid var(--neon-purple);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.2);
+        }
+
+        .neon-btn {
+            display: block;
+            width: 100%;
+            background: none;
+            border: 2px solid var(--neon-purple);
+            color: var(--neon-purple);
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+            .neon-btn:hover, .neon-btn.active {
+                background: var(--neon-purple);
+                color: white;
+                box-shadow: 0 0 20px var(--neon-purple);
+            }
+
+        .player-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-screen {
+            width: 100%;
+            max-width: 1100px;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border: 2px solid var(--neon-purple);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(188, 19, 254, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+            .video-screen iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+        .ep-info {
+            font-size: 20px;
+            color: var(--neon-purple);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .controls {
+            display: flex;
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        select {
+            background: #1a0033;
+            color: white;
+            border: 2px solid var(--neon-purple);
+            padding: 12px 25px;
+            width: 350px;
+            border-radius: 10px;
+            outline: none;
+            font-family: 'Cairo';
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">DRAMA NEON</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="series.html">مسلسلات</a></li>
+                <li><a href="movies.html">أفلام</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-layout">
+        <div class="server-sidebar" id="server-list">
+            <h3 style="text-align: center; color: var(--neon-purple);">سيرفرات المشاهدة</h3>
+        </div>
+
+        <div class="player-area">
+            <div class="ep-info">أنت تشاهد الآن: <span id="current-ep-display">جاري التحميل...</span></div>
+
+            <div class="video-screen">
+                <iframe id="main-iframe"
+                        src=""
+                        allowfullscreen
+                        allow="autoplay; encrypted-media"
+                        frameborder="0">
+                </iframe>
+            </div>
+
+            <div class="controls">
+                <button class="neon-btn" onclick="changeEpisode(-1)">⬅ الحلقة السابقة</button>
+                <button class="neon-btn" onclick="changeEpisode(1)">الحلقة التالية ➡</button>
+            </div>
+
+            <select id="ep-selector" onchange="selectEpisode()"></select>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script>
+        // جلب البيانات من الرابط
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const epId = parseInt(params.get('ep')) || 1;
+
+        // البحث عن العمل الدرامي في database.js
+        const currentItem = myDramaData.find(d => d.id == id);
+
+        if (currentItem) {
+            const episode = currentItem.episodes.find(e => e.id == epId);
+
+            // تحديث العنوان
+            document.getElementById('current-ep-display').innerText = `${currentItem.title} - ${episode ? episode.title : 'غير متوفر'}`;
+
+            // إنشاء أزرار السيرفرات
+            const serverSidebar = document.getElementById('server-list');
+
+            if (episode && episode.servers && episode.servers.length > 0) {
+                episode.servers.forEach((srv, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'neon-btn';
+                    btn.innerText = srv.name;
+                    btn.onclick = () => {
+                        document.getElementById('main-iframe').src = srv.url;
+                        // تمييز الزر النشط
+                        document.querySelectorAll('.server-sidebar .neon-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    };
+                    serverSidebar.appendChild(btn);
+
+                    // تشغيل أول سيرفر تلقائياً عند فتح الصفحة
+                    if (index === 0) {
+                        document.getElementById('main-iframe').src = srv.url;
+                        btn.classList.add('active');
+                    }
+                });
+            } else {
+                serverSidebar.innerHTML += '<p style="text-align:center">لا توجد سيرفرات متوفرة</p>';
+            }
+
+            // تحديث قائمة الحلقات (Select)
+            const selector = document.getElementById('ep-selector');
+            selector.innerHTML = currentItem.episodes.map(e =>
+                `<option value="${e.id}" ${e.id === epId ? 'selected' : ''}>${e.title}</option>`
+            ).join('');
+        } else {
+            document.getElementById('current-ep-display').innerText = "خطأ: لم يتم العثور على البيانات";
+        }
+
+        // الانتقال للحلقة المختارة
+        function selectEpisode() {
+            const selectedEp = document.getElementById('ep-selector').value;
+            window.location.href = `watch.html?id=${id}&ep=${selectedEp}`;
+        }
+
+        // التنقل بين الحلقات
+        function changeEpisode(direction) {
+            const nextEp = epId + direction;
+            const exists = currentItem.episodes.find(e => e.id === nextEp);
+            if (exists) {
+                window.location.href = `watch.html?id=${id}&ep=${nextEp}`;
+            } else {
+                alert("نهاية الحلقات المتوفرة!");
+            }
+        }
+    </script>
+</body>
+</html>
