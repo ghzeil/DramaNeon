@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAMA NEON - الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Monoton&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #050505;
+            --neon-purple: #bc13fe;
+            --dark-purple: #1a0033;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- الهيدر الأول (تمت إعادته) --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(10, 0, 20, 0.95);
+            border-bottom: 2px solid var(--neon-purple);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
+        .logo {
+            font-family: 'Monoton', cursive;
+            font-size: 32px;
+            color: var(--neon-purple);
+            text-shadow: 0 0 15px var(--neon-purple);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+                nav ul li a:hover {
+                    color: var(--neon-purple);
+                    text-shadow: 0 0 10px var(--neon-purple);
+                }
+
+        /* عدسة البحث */
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 0;
+            opacity: 0;
+            transition: 0.5s;
+            background: #1a0033;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .search-container:hover .search-input {
+            width: 200px;
+            opacity: 1;
+            padding: 8px 15px;
+            border: 1px solid var(--neon-purple);
+        }
+
+        .search-icon {
+            color: var(--neon-purple);
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .logo {
+            font-family: 'Monoton', cursive;
+            font-size: 32px;
+            color: var(--neon-purple);
+            text-shadow: 0 0 15px var(--neon-purple);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+                nav ul li a:hover {
+                    color: var(--neon-purple);
+                    text-shadow: 0 0 10px var(--neon-purple);
+                }
+        /* --- السلايدر المتحرك عند التمرير --- */
+        .slider-wrapper {
+            width: 100%;
+            height: 450px; /* تقليل الارتفاع قليلاً ليتناسب مع البوسترات */
+            overflow: hidden;
+            position: relative;
+            background: #000;
+            border-bottom: 3px solid var(--neon-purple);
+            cursor: pointer;
+            padding: 20px 0; /* مسافة بسيطة من الأعلى والأسفل */
+        }
+
+        .slider-track {
+            display: flex;
+            height: 100%;
+            gap: 15px; /* المسافة بين كل بوستر والآخر */
+            padding: 0 15px;
+            width: max-content; /* يجعل العرض على قد محتوياته عشان يتحرك صح */
+            transition: transform 1.5s ease-in-out;
+        }
+
+        /* الحركة عند تمرير السهم (Hover) */
+        .slider-wrapper:hover .slider-track {
+            /* يحركه لليسار قليلاً ليظهر بقية البوسترات */
+            transform: translateX(15%);
+        }
+
+        .slide {
+            flex: 0 0 250px; /* تحديد عرض ثابت لكل بوستر (مثلاً 250px) */
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+            .slide img {
+                width: 100%; /* الصورة تأخذ كامل عرض الـ slide اللي هو 250px */
+                height: 100%;
+                object-fit: cover;
+                transition: 0.5s;
+            }
+
+            .slide:hover {
+                transform: scale(1.05); /* زووم بسيط عند التأشير على البوستر */
+                border-color: var(--neon-purple);
+                box-shadow: 0 0 15px var(--neon-purple);
+                z-index: 10;
+            }
+
+                .slide:hover img {
+                    filter: brightness(1.2);
+                }
+
+        .trending-tag {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            z-index: 10;
+            background: var(--neon-purple);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 0 10px var(--neon-purple);
+        }
+
+        /* --- شبكة المضافة حديثاً --- */
+        .container {
+            padding: 40px 50px;
+        }
+
+        .section-title {
+            border-right: 5px solid var(--neon-purple);
+            padding-right: 15px;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+
+            .card:hover {
+                border-color: var(--neon-purple);
+                transform: translateY(-10px);
+                box-shadow: 0 0 15px var(--neon-purple);
+            }
+
+            .card img {
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+            }
+
+        .card-info {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">DRAMA NEON</a>
+        <nav>
+            <ul>
+                <li><a href="top-watched.html">الأكثر مشاهدة</a></li>
+                <li><a href="series.html">مسلسلات</a></li>
+                <li><a href="movies.html">أفلام</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="أبحث عن مسلسلك...">
+            <span class="search-icon">🔍</span>
+        </div>
+    </header>
+
+    <div class="slider-wrapper">
+        <div class="trending-tag">الأكثر مشاهدة 🔥</div>
+        <div class="slider-track" id="main-slider-track">
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">المضافة حديثاً</h2>
+        <div class="grid" id="latest-grid">
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script>
+        const sliderTrack = document.getElementById('main-slider-track');
+        const latestGrid = document.getElementById('latest-grid');
+
+        // التأكد من تحميل البيانات
+        if (typeof myDramaData !== 'undefined') {
+
+            // 1. تعبئة السلايدر (الأكثر مشاهدة فقط)
+            const trending = myDramaData.filter(item => item.top === true);
+            if (trending.length > 0) {
+                sliderTrack.innerHTML = '';
+                trending.forEach(item => {
+                    sliderTrack.innerHTML += `
+                                <div class="slide">
+                                    <a href="details.html?id=${item.id}">
+                                        <img src="${item.img}" alt="${item.title}">
+                                    </a>
+                                </div>
+                            `;
+                });
+            }
+
+            // 2. تعبئة الشبكة (كل المسلسلات)
+            latestGrid.innerHTML = '';
+            myDramaData.forEach(item => {
+                latestGrid.innerHTML += `
+                            <a href="details.html?id=${item.id}" class="card">
+                                <img src="${item.img}" alt="${item.title}">
+                                <div class="card-info">
+                                    <h4>${item.title}</h4>
+                                    <p style="color:var(--neon-purple)">⭐ ${item.rating}</p>
+                                </div>
+                            </a>
+                        `;
+            });
+        }
+    </script>
+</body>
+</html>
