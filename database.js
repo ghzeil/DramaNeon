@@ -93,15 +93,15 @@ const myDramaData = [
         description: "عمل درامي تاريخي بدوي ملحمي، تقع أحداثه في بادية نجد حوالي عام 1700 ميلادي.",
         top: true,
         trailer: "",
-        episodes: [
-            { id: 1, title: "الحلقة 18", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E18.mp4" }] },
-            { id: 2, title: "الحلقة 19", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E19.mp4" }] },
-            { id: 3, title: "الحلقة 20", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E20.mp4" }] },
-            { id: 4, title: "الحلقة 21", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E21.mp4" }] },
-            { id: 5, title: "الحلقة 22", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E22.mp4" }] },
-            { id: 6, title: "الحلقة 23", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E23.mp4" }] },
-            { id: 7, title: "الحلقة 24", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E24.mp4" }] },
-            { id: 8, title: "الحلقة 25", servers: [{ name: "تشغيل محلي", url: "Series/Kehelan/Kehelan.E25.mp4" }] }
-        ]
+      episodes: [
+    { id: 18, title: "الحلقة 18", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#py3zy" }] },
+    { id: 19, title: "الحلقة 19", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#56ypj" }] },
+    { id: 20, title: "الحلقة 20", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#ozcr3" }] },
+    { id: 21, title: "الحلقة 21", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#ibfjz" }] },
+    { id: 22, title: "الحلقة 22", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#6v5y3" }] },
+    { id: 23, title: "الحلقة 23", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#kuv6q" }] },
+    { id: 24, title: "الحلقة 24", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#ertxe" }] },
+    { id: 25, title: "الحلقة 25", servers: [{ name: "تشغيل محلي", url: "https://dramaneon.embedseek.com/#8an6l" }] }
+]
     }
 ];
