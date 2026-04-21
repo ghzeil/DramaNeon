@@ -87,7 +87,7 @@ const myDramaData = [
         id: 5,
         title: "كحيلان",
         category: "دراما",
-        img: "DramaImages/Kehelan.jpg",
+        img: "DramaImages/Kehelan.png",
         rating: "9.8",
         type: "series",
         description: "قبل نحو قرنين من الزمن، وفي عالم قبلي تحكمه العادات ومنطق القوة وسط نجد، يشتعل فتيل صراع بين فارسين بدويين تربطهما صلة الدم وتفرقهما مطامح الزعامة، فيما تتسلل خيوط العشق والمكائد لتصب الزيت على نار صراع لا يحمد عقباه.",
