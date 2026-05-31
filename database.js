@@ -120,7 +120,7 @@ const myDramaData = [
   { id: 24, title: "الحلقة 24", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#ertxe" }] },
   { id: 25, title: "الحلقة 25", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#8an6l" }] },
 ]
-    }
+    },
         {
         id: 6,
         title: "الغميضة",
@@ -163,5 +163,5 @@ const myDramaData = [
             { id: 29, title: "الحلقة 29", servers: [{ name: "سيرفر نيون", url: "" }] },
             { id: 30, title: "الحلقة 30", servers: [{ name: "سيرفر نيون", url: "" }] }
         ]
-    }
+    },
 ];
