@@ -120,5 +120,47 @@ const myDramaData = [
   { id: 24, title: "الحلقة 24", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#ertxe" }] },
   { id: 25, title: "الحلقة 25", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#8an6l" }] },
 ]
+        {
+        id: 6,
+        title: "الغميضة",
+        category: "دراما - اجتماعي",
+        img: "DramaImages/Alqamidah.jpg",
+        rating: "8.5",
+        type: "series",
+        description: "في العصر الذهبي سبعينيات القرن حيث الحب بصوت حليم تكافح وداد الكفيفة في الخياطة صباحا والغناء خلف البرقع ليلا تجبرها مأساة على الثأر لأختها تتألق هدى حسين في دور يقلب الموازين في مسلسل يراوغ التوقعات.",
+        top: true,
+        trailer: "https://www.youtube.com/watch?v=6drdVHkaVfo", // تم تعديل الرابط ليكون متوافقاً مع صيغة تضمين اليوتيوب embed
+        episodes: [
+            { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 2, title: "الحلقة 2", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 3, title: "الحلقة 3", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 4, title: "الحلقة 4", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 5, title: "الحلقة 5", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 6, title: "الحلقة 6", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 7, title: "الحلقة 7", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 8, title: "الحلقة 8", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 9, title: "الحلقة 9", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 10, title: "الحلقة 10", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 11, title: "الحلقة 11", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 12, title: "الحلقة 12", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 13, title: "الحلقة 13", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 14, title: "الحلقة 14", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 15, title: "الحلقة 15", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 16, title: "الحلقة 16", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 17, title: "الحلقة 17", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 18, title: "الحلقة 18", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 19, title: "الحلقة 19", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 20, title: "الحلقة 20", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 21, title: "الحلقة 21", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 22, title: "الحلقة 22", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 23, title: "الحلقة 23", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 24, title: "الحلقة 24", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 25, title: "الحلقة 25", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 26, title: "الحلقة 26", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 27, title: "الحلقة 27", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 28, title: "الحلقة 28", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 29, title: "الحلقة 29", servers: [{ name: "سيرفر نيون", url: "" }] },
+            { id: 30, title: "الحلقة 30", servers: [{ name: "سيرفر نيون", url: "" }] }
+        ]
     }
 ];
