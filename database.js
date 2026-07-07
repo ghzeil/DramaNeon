@@ -132,7 +132,7 @@ const myDramaData = [
         top: true,
         trailer: "https://www.youtube.com/watch?v=6drdVHkaVfo", // تم تعديل الرابط ليكون متوافقاً مع صيغة تضمين اليوتيوب embed
         episodes: [
-            { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#vhu6m",downloadUrl: "https://seekstreaming.com/d/i6vvq" // رابط التحميل الخاص بـ Seek}] },
+            { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#vhu6m","https://dramaneon.embedseek.com/#t1rh9&dl=1" // رابط التحميل الخاص بـ Seek}] },
             { id: 2, title: "الحلقة 2", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#3myqs" }] },
             { id: 3, title: "الحلقة 3", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#ie1fi" }] },
             { id: 4, title: "الحلقة 4", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#lon11" }] },
