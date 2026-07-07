@@ -267,39 +267,7 @@
                 alert("نهاية الحلقات المتوفرة!");
             }
         }
-        // عند بناء أزرار السيرفرات داخل كود watch.html الحالي:
-episode.servers.forEach((srv, index) => {
-    const btn = document.createElement('button');
-    btn.className = 'neon-btn';
-    btn.innerText = srv.name;
-    
-    btn.onclick = () => {
-        document.getElementById('main-iframe').src = srv.url;
-        
-        // تحديث رابط زر التحميل بناءً على السيرفر المختار
-        const dlBtn = document.getElementById('download-btn');
-        if (srv.downloadUrl) {
-            dlBtn.href = srv.downloadUrl;
-            dlBtn.style.display = 'inline-block'; // إظهار الزر إذا كان الرابط موجوداً
-        } else {
-            dlBtn.style.display = 'none'; // إخفاء الزر إذا لم تضع رابط تحميل لهذا السيرفر
-        }
-
-        document.querySelectorAll('.server-sidebar .neon-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-    };
-    serverSidebar.appendChild(btn);
-    
-    // تشغيل أول سيرفر تلقائياً وتحديث رابط تحميله
-    if (index === 0) {
-        document.getElementById('main-iframe').src = srv.url;
-        if (srv.downloadUrl) {
-            document.getElementById('download-btn').href = srv.downloadUrl;
-        } else {
-            document.getElementById('download-btn').style.display = 'none';
-        }
-        btn.classList.add('active');
-    }
+ 
 });
     </script>
 </body>
