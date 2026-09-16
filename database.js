@@ -41,7 +41,7 @@ const myDramaData = [
         ]
     },
 
-    // المسلسل الثالث: From (بنظام المواسم المستقلة)
+    // المسلسل الثالث: From
     {
         id: 4,
         title: "From",
@@ -105,7 +105,7 @@ const myDramaData = [
         ]
     },
 
-    // المسلسل الخامس: The Mentalist (تم تصحيح الهيكل بالكامل)
+    // المسلسل الخامس: The Mentalist (تم تصحيح الأخطاء وإغلاق الأقواس)
     {
         id: 6,
         title: "The Mentalist",
