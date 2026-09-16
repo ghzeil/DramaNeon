@@ -82,9 +82,8 @@ const myDramaData = [
         ]
     },
 
-    // المسلسل الرابع: كحيلان (نسخة الرفع المحلي بالكامل)
+    // المسلسل الرابع: كحيلان
     {
-        
         id: 5,
         title: "كحيلان",
         category: "دراما",
@@ -105,26 +104,23 @@ const myDramaData = [
             { id: 8, title: "الحلقة 25", servers: [{ name: "تشغيل محلي", url: "DramaImages/Series/Kehelan/Kehelan.E25.mp4" }] }
         ]
     },
-    // مسلسل TheMentalist
+
+    // المسلسل الخامس: The Mentalist (تم تصحيح الهيكل بالكامل)
     {
-      seasons: [ seasonNumber: 1,
-          id: 6,
-        seasonTitle: "The Mentalist",
+        id: 6,
+        title: "The Mentalist",
         category: "جريمة دراما غموض",
         img: "DramaImages/TheMentalist.jpg",
         rating: "8.2",
         type: "series",
         description: "تدور أحداث المسلسل حول اكتشاف لغز الجرائم الغامضة التي تقع، وهنا ينطلق محقق مكتب التحقيقات CSI (باتريك جين) مع فريق التحقيقات بقيادة (ليزبون) لحل لغز أصعب الجرائم، وفي الوقت نفسه يحاول باتريك جمع أكبر قدر من المعلومات حول القاتل (جون ريد)، الذى قتل زوجته وابنته، بل ويظل يطارد جون للانتقام منه.",
         top: true,
-        trailer: "https://www.youtube.com/watch?v=nn2Q69pSC_M", 
+        trailer: "https://www.youtube.com/embed/nn2Q69pSC_M", 
         episodes: [
-                 { id: 1, title: "الحلقة 1", url: "<IFRAME SRC="https://updown.cam/embed-9of9vssojowz-1920x1072.html" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=1920 HEIGHT=1092 ALLOWFULLSCREEN></IFRAME>" },
-                 { id: 2, title: "الحلقة 2", url: "https://dramaneon.embedseek.com/#tgrii" },
-                 { id: 3, title: "الحلقة 3", url: "https://dramaneon.embedseek.com/#nxagf" },
-                 { id: 4, title: "الحلقة 4", url: "https://dramaneon.embedseek.com/#6nktn" }
-           
-                  ] 
+            { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://updown.cam/embed-9of9vssojowz-1920x1072.html" }] },
+            { id: 2, title: "الحلقة 2", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#tgrii" }] },
+            { id: 3, title: "الحلقة 3", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#nxagf" }] },
+            { id: 4, title: "الحلقة 4", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#6nktn" }] }
         ]
     }
-    
 ];
