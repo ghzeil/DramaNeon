@@ -106,21 +106,109 @@ const myDramaData = [
     },
 
     // المسلسل الخامس: The Mentalist (تم تصحيح الأخطاء وإغلاق الأقواس)
+   // المسلسل الخامس: The Mentalist (مكتمل المواسم)
     {
         id: 6,
         title: "The Mentalist",
-        category: "جريمة دراما غموض",
-        img: "DramaImages/TheMentalist.jpg",
-        rating: "8.2",
         type: "series",
-        description: "تدور أحداث المسلسل حول اكتشاف لغز الجرائم الغامضة التي تقع، وهنا ينطلق محقق مكتب التحقيقات CSI (باتريك جين) مع فريق التحقيقات بقيادة (ليزبون) لحل لغز أصعب الجرائم، وفي الوقت نفسه يحاول باتريك جمع أكبر قدر من المعلومات حول القاتل (جون ريد)، الذى قتل زوجته وابنته، بل ويظل يطارد جون للانتقام منه.",
         top: true,
-        trailer: "https://www.youtube.com/embed/nn2Q69pSC_M", 
-        episodes: [
-            { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://updown.cam/embed-9of9vssojowz-1920x1072.html" }] },
-            { id: 2, title: "الحلقة 2", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#tgrii" }] },
-            { id: 3, title: "الحلقة 3", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#nxagf" }] },
-            { id: 4, title: "الحلقة 4", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#6nktn" }] }
+        img: "DramaImages/TheMentalist.jpg", 
+        rating: "8.2",
+        seasons: [
+            {
+                seasonNumber: 1,
+                seasonTitle: "الموسم الأول",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S1.jpg",
+                rating: "8.2",
+                description: "انطلاق باتريك جين مع فريق CSI لحل الجرائم الملتوية والبحث عن القاتل ريد جون.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: true,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://updown.cam/embed-9of9vssojowz-1920x1072.html" }] },
+                    { id: 2, title: "الحلقة 2", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#tgrii" }] },
+                    { id: 3, title: "الحلقة 3", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#nxagf" }] },
+                    { id: 4, title: "الحلقة 4", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#6nktn" }] }
+                ]
+            },
+            {
+                seasonNumber: 2,
+                seasonTitle: "الموسم الثاني",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S2.jpg",
+                rating: "8.3",
+                description: "تستمر التحقيقات المعقدة واقتراب باتريك خطوة إضافية من كشف هوية ريد جون.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: false,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
+                ]
+            },
+            {
+                seasonNumber: 3,
+                seasonTitle: "الموسم الثالث",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S3.jpg",
+                rating: "8.4",
+                description: "تصاعد المواجهة وتزايد الخطر حول فريق التحقيقات.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: false,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
+                ]
+            },
+            {
+                seasonNumber: 4,
+                seasonTitle: "الموسم الرابع",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S4.jpg",
+                rating: "8.3",
+                description: "تطورات جديدة في قضايا المكتب وتجاوز باتريك لتبعات القضايا السابقة.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: false,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
+                ]
+            },
+            {
+                seasonNumber: 5,
+                seasonTitle: "الموسم الخامس",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S5.jpg",
+                rating: "8.4",
+                description: "تضييق الخناق وقائمة المشتبه بهم تتقلص للوصول إلى الحقيقة.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: false,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
+                ]
+            },
+            {
+                seasonNumber: 6,
+                seasonTitle: "الموسم السادس",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S6.jpg",
+                rating: "8.5",
+                description: "موسم حاسم يكشف فيه اللغز الأكبر وحقيقة القاتل المتسلسل.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: false,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
+                ]
+            },
+            {
+                seasonNumber: 7,
+                seasonTitle: "الموسم السابع",
+                category: "جريمة - دراما - غموض",
+                img: "DramaImages/TheMentalist_S7.jpg",
+                rating: "8.2",
+                description: "الموسم الأخير وخاتمة الملحمة بين باتريك وجين وفريق العمل.",
+                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                top: false,
+                episodes: [
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
+                ]
+            }
         ]
     }
 ];
