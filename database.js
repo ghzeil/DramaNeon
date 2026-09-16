@@ -125,7 +125,7 @@ const myDramaData = [
                 trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
                 top: true,
                 episodes: [
-                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://updown.cam/embed-9of9vssojowz-1920x1072.html" }] },
+                    { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: ""https://updown.cam/9of9vssojowz"" }] },
                     { id: 2, title: "الحلقة 2", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#tgrii" }] },
                     { id: 3, title: "الحلقة 3", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#nxagf" }] },
                     { id: 4, title: "الحلقة 4", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#6nktn" }] }
