@@ -105,7 +105,6 @@ const myDramaData = [
         ]
     },
 
-    // المسلسل الخامس: The Mentalist (تم تصحيح الأخطاء وإغلاق الأقواس)
    // المسلسل الخامس: The Mentalist (مكتمل المواسم)
     {
         id: 6,
@@ -138,7 +137,7 @@ const myDramaData = [
                 img: "DramaImages/TheMentalist_S2.jpg",
                 rating: "8.3",
                 description: "تستمر التحقيقات المعقدة واقتراب باتريك خطوة إضافية من كشف هوية ريد جون.",
-                trailer: "https://www.youtube.com/embed/nn2Q69pSC_M",
+                trailer: "https://youtu.be/UAdp5SvpRvg?si=981u30l3Q5WteSjE",
                 top: false,
                 episodes: [
                     { id: 1, title: "الحلقة 1", servers: [{ name: "سيرفر نيون", url: "https://dramaneon.embedseek.com/#hpf8a" }] }
